@@ -1,0 +1,9 @@
+cvs -q log -NS -rBR-GV-FOR-THAGMO-PROD-REL-20-06062018 MarginValuationService.java
+
+cvs update -r 1.24 file.txt // checkout older version
+cp file.txt old.txt // create backup
+cvs update -A file.txt // again move to latest one
+cp old.txt file.txt // replace old to at latest one.
+cvs status file.txt // It will shows as locally modified.
+cvs commit -m "Reverting false commit"  file.txt
+cvs log file.txt // new 1.26 will be created.

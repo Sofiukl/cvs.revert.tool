@@ -1,0 +1,21 @@
+cvs -q log -NS -rBR-GV-FOR-THAGMO-PROD-REL-20-06062018 MarginValuationService.java
+
+RCS file: /home/secure/services/cvsroot/istar-gv/istar-gvrepo/istar-gv/devel/gv-core/gv-core-cam/src/main/java/com/nri/xenos/cam/margin/service/Attic/MarginValuationService.java,v
+Working file: MarginValuationService.java
+head: 1.1
+branch:
+locks: strict
+access list:
+keyword substitution: kv
+total revisions: 85;    selected revisions: 2
+description:
+----------------------------
+revision 1.1.2.22.2.12.8.3.2.2
+date: 2018/06/21 15:16:39;  author: sofikulm;  state: Exp;  lines: +71 -62
+THAGMO-9937
+[Revert] Define call status in continuous
+----------------------------
+revision 1.1.2.22.2.12.8.3.2.1
+date: 2018/06/19 12:10:08;  author: shalinis;  state: Exp;  lines: +4 -4
+ BR-GV-FOR-THAGMO-PROD-REL-20-06062018-THAGMO-9898
+=============================================================================

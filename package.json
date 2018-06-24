@@ -1,0 +1,41 @@
+{
+  "name": "cvs.revert.tool",
+  "version": "1.0.0",
+  "description": "A sample project to automate file revert to previous version (CVS)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sofikulm",
+  "license": "MIT",
+  "dependencies": {
+    "@types/image-size": "0.0.29",
+    "@types/inquirer": "0.0.41",
+    "@types/node": "^10.1.2",
+    "@types/puppeteer": "^1.3.3",
+    "exceljs": "^1.4.10",
+    "typescript": "^2.9.2",
+    "winston": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.7",
+    "@types/jquery": "^3.3.2",
+    "@types/request": "^2.47.0",
+    "@types/winston": "^2.3.9",
+    "typescript-eslint-parser": "^16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sofiukl/cvs.revert.tool.git"
+  },
+  "keywords": [
+    "cvs",
+    "automate",
+    "revert",
+    "tool"
+  ],
+  "bugs": {
+    "url": "https://github.com/Sofiukl/cvs.revert.tool/issues"
+  },
+  "homepage": "https://github.com/Sofiukl/cvs.revert.tool#readme"
+}
