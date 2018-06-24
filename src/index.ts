@@ -7,13 +7,12 @@ process.on('uncaughtException', (err) => {
     console.log(err);
 })
 
-let content: string = '';
 
 let restoreToVesion: string = '';
 let restoreFromVersion: string = '';
 
 let readFromCvs = async () => {
-    let cvsLog = execSync('cvs -q log -NS -rBR-GV-FOR-THAGMO-PROD-REL-20-06062018 MarginValuationService.java').toString();
+    let cvsLog = execSync('cvs -q log -NS -rBR-GV-FOR-THAGMO-PROD-REL-20-06062018 -- devel\\gv-core\\gv-core-cam\\src\\main\\java\\com\\nri\\xenos\\cam\\margin\\service\\MarginValuationService.java').toString();
     console.log(cvsLog);
     const currentCheckins: any = parseCVSLog(cvsLog);
     console.log(`current checkins: ${currentCheckins}`)
@@ -46,7 +45,7 @@ let readFromCvs = async () => {
 let readRestoreToVersion = () => {
     
     try {
-        let cvsRestoreToLog = execSync('cvs -q log -NS -rBR-GV-FOR-THAGMO-PROD-REL-20-06062018 MarginValuationService.java').toString();
+        let cvsRestoreToLog = execSync('cvs -q log -NS -rBR-GV-FOR-THAGMO-PROD-REL-20-06062018 -- devel\\gv-core\\gv-core-cam\\src\\main\\java\\com\\nri\\xenos\\cam\\margin\\service\\MarginValuationService.java').toString();
         const revisions: any = parseCVSLog(cvsRestoreToLog);
        
          //TODO Retrive the version and display
@@ -64,12 +63,12 @@ let parseCVSLog = (log: string) => {
     if(!log || log == null){
         console.log('[Info] No version of the mentioned file is tagged');
     }else {
-        const start = content.indexOf('description');
-        const checkInfo = content.substring(start);
+        const start = log.indexOf('description');
+        const checkInfo = log.substring(start);
 
         console.log(checkInfo);
 
-        var wordsArray = content.split(/\s+/);
+        var wordsArray = log.split(/\s+/);
         console.log(wordsArray);
      
         let revArr: any = [];
